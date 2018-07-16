@@ -1,0 +1,24 @@
+@media (min-width: 1200px) {
+   .container {
+    max-width: 800px;
+    } 
+}
+
+
+#heading {
+    text-align: center;
+}
+
+.create-form,
+#bu {
+    text-align: center;
+}
+
+#waitingSide {
+}
+#eatenSide {
+}
+
+[data-newdevour = "true"] {
+    display: none;
+}
