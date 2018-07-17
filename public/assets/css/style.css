@@ -10,6 +10,7 @@ h1 {
 
 h5 {
     padding-top: 13px;
+    font-size: 16px;
 }
 
 label {
@@ -18,6 +19,7 @@ label {
 }
 #heading {
     text-align: center;
+    padding-top: 12px;
 }
 #headingDiv {
     padding-bottom: 17px;
@@ -33,11 +35,18 @@ body {
 }
 
 img {
-    align-content: center;
+    width: 223px;
+    height: 182px;
 }
 
-
+#image-col {
+    text-align: center;
+}
 
 .form-group {
     margin-bottom: 10px;
+}
+
+#headingRow {
+    margin-top: 37px;
 }
