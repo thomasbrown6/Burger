@@ -1,8 +1,17 @@
 <div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+      <img src="../public/assets/images/burger.png" width="50" height="50" alt="burger">
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
+<div class="row" id="headingDiv">
   <div class="col-md-12">
-    <h1 id="heading">Eat-Da-Burger!</h1>
+      <h1 id="heading">Eat-Da-Burger!</h1>
   </div>
 </div>
+  
 
 
 {{!-- Undevoured Burgers --}}
@@ -11,7 +20,7 @@
     <ol id="waitingSide">
       {{#each burgers}}
         {{#unless devoured}}
-          {{> burgers/burger-block eaten=false}}
+          {{> burgers/burger-block devoured=false}}
         {{/unless}}
       {{/each}}
     </ol>
@@ -22,7 +31,7 @@
     <ol id="eatenSide">
       {{#each burgers}}
         {{#if devoured}}
-          {{> burgers/burger-block eaten=true}}
+          {{> burgers/burger-block devoured=true}}
         {{/if}}
       {{/each}}
     </ol>
@@ -44,8 +53,8 @@
     <input type="text" id="bu" name="name">
   </div>
 
-  <button type="submit">Submit</button>
+  <button type="submit" class="btn btn-success">Submit</button>
 
-  <h4>Enter a burger you want to eat, click the submit button</h4>
+  <h5>Enter a burger you want to eat, click the "Submit" button</h4>
 
 </form>

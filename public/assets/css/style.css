@@ -1,12 +1,26 @@
 @media (min-width: 1200px) {
    .container {
-    max-width: 800px;
+    max-width: 1000px;
     } 
 }
 
+h1 {
+    text-shadow: 2px 1px #868e96;
+}
 
+h5 {
+    padding-top: 13px;
+}
+
+label {
+    font-size: 24px;
+    font-weight: bold;
+}
 #heading {
     text-align: center;
+}
+#headingDiv {
+    padding-bottom: 17px;
 }
 
 .create-form,
@@ -14,11 +28,16 @@
     text-align: center;
 }
 
-#waitingSide {
-}
-#eatenSide {
+body {
+    background: #f0ad4e;
 }
 
-[data-newdevour = "true"] {
-    display: none;
+img {
+    align-content: center;
+}
+
+
+
+.form-group {
+    margin-bottom: 10px;
 }

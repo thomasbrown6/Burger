@@ -1,14 +1,15 @@
 $(function() {
+    // To devour burger
     $(".change-devour").on("click", function(event) {
         var id = $(this).data("id");
-        var newdevour = $(this).attr("data-newdevour", true);
+        var newdevour = $(this).data("newdevour");
 
         var newDevourState = {
             devoured: newdevour
         };
 
         // Send the PUT request
-        $.ajax("/api/burgers" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevourState
         }).then(
@@ -20,6 +21,7 @@ $(function() {
         );
     });
 
+    // Add new burger
     $(".create-form").on("submit", function(event) {
         // preventDefault on the submit event
         event.preventDefault();
@@ -37,5 +39,21 @@ $(function() {
             }
         );
     });
+
+    // To delete burger from list
+    $(".delete-burger").on("click", function(event) {
+        var id = $(this).data("id");
+
+        // Delete request
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(
+            function() {
+                console.log("deleted burger ", id);
+                location.reload();
+            }
+        )
+    })
+
 
 });
